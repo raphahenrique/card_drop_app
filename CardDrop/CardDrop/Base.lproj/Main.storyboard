@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NLY-SB-Oii">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--CARD DROP-->
+        <scene sceneID="mDD-0k-Bvq">
+            <objects>
+                <collectionViewController id="B0h-BL-MBB" customClass="OverviewCollectionViewController" customModule="CardDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="d5o-5L-Ja3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g4I-PA-Bht">
+                            <size key="itemSize" width="150" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="YBB-NQ-6UF" customClass="CategoryCollectionViewCell" customModule="CardDrop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ISP-5M-XKR">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="A22-Mw-WPG">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exploration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVR-H5-dQw">
+                                            <rect key="frame" x="21.5" y="162" width="107" height="22"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="A22-Mw-WPG" firstAttribute="top" secondItem="ISP-5M-XKR" secondAttribute="top" id="RRp-LG-jR5"/>
+                                        <constraint firstAttribute="bottom" secondItem="A22-Mw-WPG" secondAttribute="bottom" id="Tm4-Sd-wQA"/>
+                                        <constraint firstAttribute="bottom" secondItem="XVR-H5-dQw" secondAttribute="bottom" constant="16" id="h2p-Np-zAL"/>
+                                        <constraint firstItem="A22-Mw-WPG" firstAttribute="leading" secondItem="ISP-5M-XKR" secondAttribute="leading" id="myX-dm-Lol"/>
+                                        <constraint firstItem="XVR-H5-dQw" firstAttribute="centerX" secondItem="ISP-5M-XKR" secondAttribute="centerX" id="pKY-Xz-KK3"/>
+                                        <constraint firstAttribute="trailing" secondItem="A22-Mw-WPG" secondAttribute="trailing" id="qzR-oV-CEY"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="backgroundImageView" destination="A22-Mw-WPG" id="tQZ-Q7-Twx"/>
+                                    <outlet property="categoryLabel" destination="XVR-H5-dQw" id="H41-Ef-ZFf"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="B0h-BL-MBB" id="PfD-0u-yms"/>
+                            <outlet property="delegate" destination="B0h-BL-MBB" id="vix-m7-5VP"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="CARD DROP" id="Wca-c5-98U"/>
+                    <connections>
+                        <segue destination="c5C-Tg-bYL" kind="show" identifier="ImageSelectionSegue" id="J3a-A7-Isg"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwL-TG-vvS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="120.53571428571428"/>
+        </scene>
+        <!--Image Selection View Controller-->
+        <scene sceneID="fjQ-Ei-loL">
+            <objects>
+                <viewController id="c5C-Tg-bYL" customClass="ImageSelectionViewController" customModule="CardDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qp1-mg-eE4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wgz-fY-1Lz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g71-v0-OU5">
+                                <rect key="frame" x="63" y="481" width="53.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wgz-fY-1Lz" firstAttribute="top" secondItem="Qp1-mg-eE4" secondAttribute="top" id="2wP-2P-HSg"/>
+                            <constraint firstItem="g71-v0-OU5" firstAttribute="centerY" secondItem="Wgz-fY-1Lz" secondAttribute="centerY" constant="45" id="3bo-mO-hjh"/>
+                            <constraint firstItem="g71-v0-OU5" firstAttribute="leading" secondItem="ElE-xW-9Ss" secondAttribute="leading" constant="63" id="OGH-fx-iDS"/>
+                            <constraint firstItem="Wgz-fY-1Lz" firstAttribute="leading" secondItem="ElE-xW-9Ss" secondAttribute="leading" id="USH-xI-Z4A"/>
+                            <constraint firstItem="ElE-xW-9Ss" firstAttribute="trailing" secondItem="Wgz-fY-1Lz" secondAttribute="trailing" id="W8m-8H-9wQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Wgz-fY-1Lz" secondAttribute="bottom" id="y5v-lb-dUD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ElE-xW-9Ss"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FgR-iG-bCu"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="g71-v0-OU5" id="xto-z2-g10"/>
+                        <outlet property="initialImageView" destination="Wgz-fY-1Lz" id="iYf-cm-HeZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xRn-BE-euF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924.6376811594205" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jAo-A6-wIE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NLY-SB-Oii" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="Pc9-kK-q61">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="36"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <outlet property="delegate" destination="TUu-ef-Mcw" id="RHI-JA-313"/>
+                        <segue destination="B0h-BL-MBB" kind="relationship" relationship="rootViewController" id="FAr-Iv-qxE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cnn-KU-6XE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="TUu-ef-Mcw" customClass="ScaleTransitioningDelegate" customModule="CardDrop" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="category1" width="959" height="1343"/>
+    </resources>
+</document>
