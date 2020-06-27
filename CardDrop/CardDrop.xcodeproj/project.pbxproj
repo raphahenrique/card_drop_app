@@ -27,6 +27,9 @@
 		985C6C4F24A399AE0057AF93 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 985C6C4A24A399AE0057AF93 /* Montserrat-SemiBold.ttf */; };
 		985C6C5024A399AE0057AF93 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 985C6C4B24A399AE0057AF93 /* Montserrat-Regular.ttf */; };
 		985C6C5324A39E180057AF93 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C6C5224A39E180057AF93 /* CategoryCollectionViewCell.swift */; };
+		9893C11C24A56A0B00FBAC0A /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9893C11B24A56A0B00FBAC0A /* PhotoView.swift */; };
+		989F6A6024A7DE4D009F1930 /* ShareCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989F6A5F24A7DE4D009F1930 /* ShareCardViewController.swift */; };
+		98A8736E24A533ED00EA7A1F /* PhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A8736D24A533ED00EA7A1F /* PhotoView.xib */; };
 		98F6611A24A3D9A2004D66EF /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F6611924A3D9A2004D66EF /* ScaleTransitioningDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		985C6C4A24A399AE0057AF93 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		985C6C4B24A399AE0057AF93 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		985C6C5224A39E180057AF93 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		9893C11B24A56A0B00FBAC0A /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		989F6A5F24A7DE4D009F1930 /* ShareCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardViewController.swift; sourceTree = "<group>"; };
+		98A8736D24A533ED00EA7A1F /* PhotoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoView.xib; sourceTree = "<group>"; };
 		98F6611924A3D9A2004D66EF /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +92,7 @@
 		985C6C1E24A392DD0057AF93 /* CardDrop */ = {
 			isa = PBXGroup;
 			children = (
+				9893C11A24A569D700FBAC0A /* View */,
 				98F6611824A3D963004D66EF /* Transitions */,
 				985C6C5124A39DED0057AF93 /* Cell */,
 				985C6C4624A399AE0057AF93 /* Fonts */,
@@ -95,6 +102,7 @@
 				985C6C1F24A392DD0057AF93 /* AppDelegate.swift */,
 				985C6C2124A392DD0057AF93 /* SceneDelegate.swift */,
 				985C6C2524A392DD0057AF93 /* Main.storyboard */,
+				98A8736D24A533ED00EA7A1F /* PhotoView.xib */,
 				985C6C2824A392E00057AF93 /* Assets.xcassets */,
 				985C6C2A24A392E00057AF93 /* LaunchScreen.storyboard */,
 				985C6C2D24A392E00057AF93 /* Info.plist */,
@@ -128,6 +136,7 @@
 			children = (
 				985C6C4324A3985B0057AF93 /* OverviewCollectionViewController.swift */,
 				980D513B24A3A55E008FCE40 /* ImageSelectionViewController.swift */,
+				989F6A5F24A7DE4D009F1930 /* ShareCardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +159,14 @@
 				985C6C5224A39E180057AF93 /* CategoryCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9893C11A24A569D700FBAC0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9893C11B24A56A0B00FBAC0A /* PhotoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		98F6611824A3D963004D66EF /* Transitions */ = {
@@ -229,6 +246,7 @@
 				985C6C4D24A399AE0057AF93 /* Montserrat-ExtraLight.ttf in Resources */,
 				985C6C3924A393470057AF93 /* Categories.plist in Resources */,
 				985C6C2724A392DD0057AF93 /* Main.storyboard in Resources */,
+				98A8736E24A533ED00EA7A1F /* PhotoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,11 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989F6A6024A7DE4D009F1930 /* ShareCardViewController.swift in Sources */,
 				98F6611A24A3D9A2004D66EF /* ScaleTransitioningDelegate.swift in Sources */,
 				985C6C5324A39E180057AF93 /* CategoryCollectionViewCell.swift in Sources */,
 				985C6C4224A393500057AF93 /* DataRequest.swift in Sources */,
 				985C6C4424A3985B0057AF93 /* OverviewCollectionViewController.swift in Sources */,
 				985C6C3F24A393500057AF93 /* Image.swift in Sources */,
+				9893C11C24A56A0B00FBAC0A /* PhotoView.swift in Sources */,
 				980D513C24A3A55E008FCE40 /* ImageSelectionViewController.swift in Sources */,
 				985C6C2024A392DD0057AF93 /* AppDelegate.swift in Sources */,
 				985C6C4024A393500057AF93 /* Quote.swift in Sources */,
